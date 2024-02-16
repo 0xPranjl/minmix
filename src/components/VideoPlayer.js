@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Slider } from 'antd';
+import Timeline from './Timeline';
 
 const VideoPlayer = ({ videoFile }) => {
   const [currentTime, setCurrentTime] = useState(0);
@@ -37,6 +38,7 @@ const VideoPlayer = ({ videoFile }) => {
             style={{ width: '55%',height:'60%' }}
            
           />
+           {/* <Timeline videoSrc={URL.createObjectURL(videoFile)}/> */}
           {/* <Slider
             value={currentTime}
             max={duration}

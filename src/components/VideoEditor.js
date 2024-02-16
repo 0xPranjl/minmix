@@ -9,6 +9,7 @@ import { Button, Upload, message } from 'antd';
 import VideoUpload from "./VideoUpload"
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { Card } from 'antd';
+import GridButtonLayout from "./GridButtonLayout"
 
 const ffmpeg = createFFmpeg({ log: true })
 
@@ -29,7 +30,7 @@ function VideoEditor() {
 	return (
 		<div className={"bg"}>
              <div className={"upload-div"}>
-                    {!videoFile?<VideoUpload
+                    {!videoFile?<><VideoUpload
                         disabled={!!videoFile}
                         onChange={(videoFile) => {
                             setVideoFile(videoFile)
@@ -37,10 +38,12 @@ function VideoEditor() {
                         onRemove={() => {
                             setVideoFile(undefined)
                         }}
-                    />:<>
+                    />
+                    </>:<>
                         <VideoPlayer videoFile={videoFile} />
                     </>}
                 </div>
+                <GridButtonLayout></GridButtonLayout>
 		</div>
 	)
 }
