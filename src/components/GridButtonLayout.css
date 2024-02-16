@@ -1,0 +1,17 @@
+.button-container {
+    padding: 20px; /* Adjust padding as needed */
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .row {
+    margin-bottom: 16px; /* Adjust row margin as needed */
+    
+  }
+  
+  .button {
+    width: 100%; /* Make buttons fill the entire column */
+    margin-right: 50px;
+  }
+  
